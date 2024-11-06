@@ -2316,6 +2316,21 @@
             }
           }
         },
+        "dynamic_upsell_section" : {
+          "name" : "Dynamic Upsell Section",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Recently Viewed"
+            },
+            "range": {
+              "label": "Number of Products to show"
+            },
+            "checkbox": {
+              "label": "Show Buy Buttons?"
+            }
+          }
+        },
         "icon_with_text": {
           "name": "Icon with text",
           "settings": {
