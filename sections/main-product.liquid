@@ -658,6 +658,21 @@
                     <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                   {%- endif -%}
                 </product-recommendations>
+              
+              {% when 'dynamic-upsell-section' %}
+                {{ 'dynamic-upsell-section.js' | asset_url | script_tag }}
+                {{ 'dynamic-upsell-section.css' | asset_url | stylesheet_tag }}
+
+
+
+                <div class="dynamic-upsells-section hide">
+                  <h2 class="dynamic-upsells-title">{{ block.settings.title }}</h2>
+
+                  <div class="dynamic-upsells-container" 
+                  data-max-upsells="{{ block.settings.number_of_items }}" 
+                  data-show-buy-buttons="{{ block.settings.show_buy_buttons }}">
+                  </div>
+                </div>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
@@ -1457,6 +1472,33 @@
           "id": "enable_quick_add",
           "label": "t:sections.main-product.blocks.complementary_products.settings.enable_quick_add.label",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "dynamic-upsell-section",
+      "name": "t:sections.main-product.blocks.dynamic_upsell_section.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product.blocks.dynamic_upsell_section.settings.heading.label",
+          "default": "t:sections.main-product.blocks.dynamic_upsell_section.settings.heading.default"
+        },
+        {
+          "type": "range",
+          "id": "number_of_items",
+          "label": "t:sections.main-product.blocks.dynamic_upsell_section.settings.range.label",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "type": "checkbox",
+          "id": "show_buy_buttons",
+          "label": "Show Buy Buttons",
+          "default": true
         }
       ]
     },
