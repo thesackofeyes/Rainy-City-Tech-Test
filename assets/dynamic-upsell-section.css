@@ -1,0 +1,30 @@
+.hide{
+    display: none;
+}
+
+.dynamic-upsells-section a {
+    text-decoration: none;
+}
+
+.dynamic-upsells-container {
+    display: flex;
+    gap: 24px;
+    text-align: center;
+}
+
+.dynamic-upsells-section .dynamic-upsells-container h2 {
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 60px;
+}
+
+.dynamic-upsells-section #add-to-cart {
+    padding: 10px 20px;
+    background: white;
+    font-family: assistant;
+    font-weight: bold;
+    cursor: pointer;
+}
+.dynamic-upsells-section #add-to-cart:hover {
+    text-decoration: underline;
+}
