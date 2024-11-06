@@ -10,6 +10,11 @@
     display: flex;
     gap: 24px;
     text-align: center;
+    flex-wrap: wrap;
+}
+
+.dynamic-upsells-container .product {
+    width: 28%;
 }
 
 .dynamic-upsells-section .dynamic-upsells-container h2 {
